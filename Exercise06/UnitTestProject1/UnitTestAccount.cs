@@ -20,27 +20,25 @@ namespace UnitTestProject1
         public void TestMethodWithDraw()
         {
             Account acc = new Account(200000);
-            Assert.IsNotNull(acc);
-            Assert.IsInstanceOfType(acc, typeof(Account));
-            Assert.AreEqual(200000, acc.Balance());
+            acc.WithDraw(20000);
+            Assert.AreEqual(180000, acc.Balance());
         }
 
         [TestMethod]
         public void TestMethodDeposit()
         {
             Account acc = new Account(200000);
-            Assert.IsNotNull(acc);
-            Assert.IsInstanceOfType(acc, typeof(Account));
-            Assert.AreEqual(200000, acc.Balance());
+            acc.Deposit(40000);
+            Assert.AreEqual(240000, acc.Balance());
         }
 
         [TestMethod]
         public void TestMethodBalance()
         {
             Account acc = new Account(200000);
-            Assert.IsNotNull(acc);
-            Assert.IsInstanceOfType(acc, typeof(Account));
-            Assert.AreEqual(200000, acc.Balance());
+            acc.WithDraw(20000);
+            acc.Deposit(40000);
+            Assert.AreEqual(220000, acc.Balance());
         }
 
     }

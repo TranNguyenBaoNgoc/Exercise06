@@ -8,25 +8,26 @@ namespace Problem1
 {
     public class Account
     {
+        private int money;
+
         public Account(int amount)
         {
-            int money = amount;
-            Console.WriteLine("");
+            money = amount;
         }
 
         public void WithDraw(int amount)
         {
-            Console.WriteLine();
+            money -= amount;
         }
 
         public void Deposit(int amount)
         {
-
+            money += amount;
         }
 
         public int Balance()
         {
-            return 0;
+            return money;
         }
     }
 }

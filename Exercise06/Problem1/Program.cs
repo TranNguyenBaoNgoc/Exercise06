@@ -10,9 +10,10 @@ namespace Problem1
     {
         static void Main(string[] args)
         {
-
-
-
+            Account acc = new Account(200000);
+            acc.WithDraw(20000);
+            acc.Deposit(40000);
+            Console.WriteLine(acc.Balance());
         }
     }
 }
