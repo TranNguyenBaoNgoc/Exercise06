@@ -11,11 +11,11 @@ namespace UnitTestProject2
         public void TestStack()
         {
             Stack s = new Stack(5);
-            s.Put(5);
-            s.Put(4);
-            s.Put(7);
-            s.Put(51);
-            s.Put(9);
+            s.Put("a");
+            s.Put("a");
+            s.Put("a");
+            s.Put("a");
+            s.Put("a");
             Assert.IsNotNull(s);
             Assert.IsInstanceOfType(s, typeof(Stack));
             Assert.AreEqual(5, s.Count());
@@ -25,12 +25,12 @@ namespace UnitTestProject2
         public void TestMethodPop()
         {
             Stack s = new Stack(5);
-            s.Put(5);
-            s.Put(4);
-            s.Put(7);
-            s.Put(51);
-            s.Put(9);
-            Assert.AreEqual(9, s.Pop());
+            s.Put("a");
+            s.Put("a");
+            s.Put("a");
+            s.Put("a");
+            s.Put("a");
+            Assert.AreEqual("a", s.Pop());
             Assert.AreEqual(4, s.Count());
         }
 
@@ -38,12 +38,12 @@ namespace UnitTestProject2
         public void TestMethodPeek()
         {
             Stack s = new Stack(5);
-            s.Put(5);
-            s.Put(4);
-            s.Put(7);
-            s.Put(51);
-            s.Put(9);
-            Assert.AreEqual(9, s.Peek());
+            s.Put("a");
+            s.Put("a");
+            s.Put("a");
+            s.Put("a");
+            s.Put("a");
+            Assert.AreEqual("a", s.Peek());
             Assert.AreEqual(5, s.Count());
         }
 
@@ -51,11 +51,11 @@ namespace UnitTestProject2
         public void TestMethodClear()
         {
             Stack s = new Stack(5);
-            s.Put(5);
-            s.Put(4);
-            s.Put(7);
-            s.Put(51);
-            s.Put(9);
+            s.Put("a");
+            s.Put("a");
+            s.Put("a");
+            s.Put("a");
+            s.Put("a");
             s.Clear();
             Assert.AreEqual(0, s.Count());
         }
